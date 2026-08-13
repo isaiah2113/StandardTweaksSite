@@ -87,7 +87,7 @@ h1 {
 }
 
 h1 span {
-    color: #888888;
+    color: #aaaaaa;
 }
 
 .hero-desc {
@@ -118,7 +118,7 @@ h1 span {
 }
 
 .btn-white:hover {
-    background-color: #d1d1d1;
+    background-color: #cccccc;
     transform: translateY(-2px);
 }
 
