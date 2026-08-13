@@ -41,44 +41,37 @@ body {
     color: #ffffff;
 }
 
-/* Hero Section */
-.hero-section {
-    position: relative;
-    text-align: center;
-    max-width: 850px;
-    margin: 100px auto 0;
-    padding: 0 20px;
+/* Split Hero Container */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+    gap: 60px;
 }
 
-/* Subtle White Glow */
-.hero-glow {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.04);
-    filter: blur(80px);
-    z-index: -1;
-    pointer-events: none;
+.hero-text-content {
+    flex: 1;
+    text-align: left;
 }
 
-.badge {
+.status-pill {
     display: inline-block;
     background: rgba(255, 255, 255, 0.05);
     color: #ffffff;
-    padding: 6px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 1.2px;
-    margin-bottom: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 h1 {
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: -1.5px;
     margin-bottom: 20px;
@@ -92,24 +85,22 @@ h1 span {
 
 .hero-desc {
     color: #aaaaaa;
-    font-size: 1.1rem;
-    max-width: 680px;
-    margin: 0 auto 40px;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
     line-height: 1.6;
 }
 
 /* Action Buttons */
 .hero-btns {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .btn-white {
     background-color: #ffffff;
     color: #000000;
-    padding: 14px 30px;
+    padding: 12px 26px;
     border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
@@ -125,7 +116,7 @@ h1 span {
 .btn-outline {
     background-color: transparent;
     color: #ffffff;
-    padding: 14px 30px;
+    padding: 12px 26px;
     border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
@@ -140,9 +131,128 @@ h1 span {
 
 .hero-footer-text {
     display: flex;
-    justify-content: center;
     gap: 15px;
     color: #777777;
     font-size: 0.85rem;
     font-weight: 500;
+}
+
+/* Unique Performance Dashboard Visual Graphic */
+.hero-visual-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.perf-dashboard {
+    width: 100%;
+    max-width: 480px;
+    background-color: #080808;
+    border: 1px solid #222222;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.dash-header {
+    background-color: #121212;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #222222;
+}
+
+.dash-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.dash-dot.red { background-color: #ff5f56; }
+.dash-dot.yellow { background-color: #ffbd2e; }
+.dash-dot.green { background-color: #27c93f; }
+
+.dash-title {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: #777777;
+    font-family: monospace;
+}
+
+.dash-body {
+    padding: 24px;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #161616;
+    font-size: 0.9rem;
+}
+
+.metric-name {
+    color: #888888;
+}
+
+.metric-value {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.metric-value.optimal {
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.graph-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 90px;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: #030303;
+    border: 1px solid #1a1a1a;
+    border-radius: 6px;
+}
+
+.graph-bar {
+    width: 10%;
+    background-color: #333333;
+    border-radius: 2px 2px 0 0;
+    transition: height 0.3s;
+}
+
+.graph-bar.peak {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.graph-label {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555555;
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .hero-text-content {
+        text-align: center;
+    }
+    .hero-btns, .hero-footer-text {
+        justify-content: center;
+    }
 }
