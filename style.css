@@ -17,47 +17,48 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 25px 80px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .logo {
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     letter-spacing: 0.5px;
 }
 
-.navbar nav a {
+.nav-links a {
     color: #94a3b8;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 30px;
     font-size: 0.9rem;
+    font-weight: 500;
     transition: color 0.2s ease;
 }
 
-.navbar nav a:hover {
+.nav-links a:hover {
     color: #ffffff;
 }
 
-/* Hero Section with Shine */
-.hero-container {
+/* Hero Section */
+.hero-section {
     position: relative;
     text-align: center;
-    max-width: 800px;
-    margin: 80px auto 0;
+    max-width: 850px;
+    margin: 100px auto 0;
     padding: 0 20px;
 }
 
-/* Glowing background spark behind text */
-.glow-effect {
+/* Glowing Aura */
+.hero-glow {
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 350px;
-    height: 180px;
-    background: linear-gradient(135deg, rgba(0, 229, 255, 0.25), rgba(110, 64, 255, 0.15));
-    filter: blur(70px);
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.25), rgba(99, 102, 241, 0.15));
+    filter: blur(80px);
     z-index: -1;
     pointer-events: none;
 }
@@ -66,81 +67,82 @@ body {
     display: inline-block;
     background: rgba(0, 229, 255, 0.08);
     color: #00e5ff;
-    padding: 6px 14px;
+    padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+    margin-bottom: 25px;
     border: 1px solid rgba(0, 229, 255, 0.2);
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
     margin-bottom: 20px;
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 h1 span {
     color: #00e5ff;
-    text-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+    text-shadow: 0 0 30px rgba(0, 229, 255, 0.35);
 }
 
-.description {
+.hero-desc {
     color: #94a3b8;
     font-size: 1.1rem;
-    max-width: 620px;
-    margin: 0 auto 35px;
+    max-width: 650px;
+    margin: 0 auto 40px;
     line-height: 1.6;
 }
 
-/* Buttons with shine hover effects */
-.button-group {
+/* Action Buttons */
+.hero-btns {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
-.btn-main {
+.btn-cyan {
     background-color: #00e5ff;
     color: #07090e;
-    padding: 12px 28px;
+    padding: 14px 30px;
     border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
-    transition: all 0.25s ease;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+    transition: all 0.2s ease;
 }
 
-.btn-main:hover {
+.btn-cyan:hover {
     background-color: #33edff;
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+    box-shadow: 0 0 35px rgba(0, 229, 255, 0.5);
 }
 
-.btn-sub {
+.btn-outline {
     background-color: transparent;
     color: #ffffff;
-    padding: 12px 28px;
+    padding: 14px 30px;
     border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
 }
 
-.btn-sub:hover {
+.btn-outline:hover {
     border-color: rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.03);
 }
 
-.trust-indicators {
+.hero-footer-text {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     color: #64748b;
     font-size: 0.85rem;
+    font-weight: 500;
 }
