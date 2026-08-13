@@ -1,211 +1,68 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #0b0f19;
+    background-color: #000000;
     color: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 80px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 100vh;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-}
-
-.navbar nav a {
-    color: #a0aec0;
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-}
-
-.navbar nav a:hover {
-    color: #ffffff;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 100px 20px 80px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.badge {
-    display: inline-block;
-    background: rgba(0, 229, 255, 0.1);
-    color: #00e5ff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-    border: 1px solid rgba(0, 229, 255, 0.2);
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}
-
-.hero h1 span {
-    color: #00e5ff;
-}
-
-.hero p {
-    color: #a0aec0;
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto 35px;
-}
-
-/* Buttons */
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.btn-primary {
-    background-color: #00e5ff;
-    color: #0b0f19;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background 0.2s;
-}
-
-.btn-primary:hover {
-    background-color: #00b3cc;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: border-color 0.2s;
-}
-
-.btn-secondary:hover {
-    border-color: #ffffff;
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    color: #718096;
-    font-size: 0.9rem;
-}
-
-/* Products Section */
-.products-section {
-    padding: 60px 20px 100px;
-    max-width: 1000px;
-    margin: 0 auto;
+.wrapper {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px 20px;
     text-align: center;
 }
 
-.products-section h2 {
+h1 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
     font-weight: 700;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    justify-content: center;
-}
-
-.product-card {
-    background-color: #131b2e;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 30px;
-    text-align: left;
-    position: relative;
-    transition: transform 0.2s, border-color 0.2s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 229, 255, 0.4);
-}
-
-.product-card.featured {
-    border-color: rgba(0, 229, 255, 0.4);
-}
-
-.tag {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 229, 255, 0.15);
-    color: #00e5ff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 6px;
-}
-
-.product-card h3 {
-    font-size: 1.3rem;
+    letter-spacing: -0.5px;
     margin-bottom: 10px;
 }
 
-.product-desc {
-    color: #a0aec0;
+.tagline {
+    color: #888888;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #0a0a0a;
+    border: 1px solid #222222;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: left;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aaaaaa;
     font-size: 0.95rem;
-    margin-bottom: 25px;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
-.price {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.btn-card {
-    display: block;
-    text-align: center;
-    background: transparent;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px;
+.download-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px 24px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.2s;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
 }
 
-.btn-card:hover, .featured-btn {
-    background-color: #00e5ff;
-    color: #0b0f19;
-    border-color: #00e5ff;
+.download-btn:hover {
+    background-color: #cccccc;
 }
