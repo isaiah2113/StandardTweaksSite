@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #07090e;
+    background-color: #000000;
     color: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     min-height: 100vh;
@@ -18,17 +18,18 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 25px 80px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo {
     font-weight: 800;
     font-size: 1.15rem;
     letter-spacing: 0.5px;
+    color: #ffffff;
 }
 
 .nav-links a {
-    color: #94a3b8;
+    color: #888888;
     text-decoration: none;
     margin-left: 30px;
     font-size: 0.9rem;
@@ -49,7 +50,7 @@ body {
     padding: 0 20px;
 }
 
-/* Glowing Aura */
+/* Subtle White Glow */
 .hero-glow {
     position: absolute;
     top: 30px;
@@ -57,7 +58,7 @@ body {
     transform: translateX(-50%);
     width: 400px;
     height: 200px;
-    background: linear-gradient(135deg, rgba(0, 229, 255, 0.25), rgba(99, 102, 241, 0.15));
+    background: rgba(255, 255, 255, 0.04);
     filter: blur(80px);
     z-index: -1;
     pointer-events: none;
@@ -65,15 +66,15 @@ body {
 
 .badge {
     display: inline-block;
-    background: rgba(0, 229, 255, 0.08);
-    color: #00e5ff;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 1.2px;
     margin-bottom: 25px;
-    border: 1px solid rgba(0, 229, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 h1 {
@@ -82,15 +83,15 @@ h1 {
     letter-spacing: -1.5px;
     margin-bottom: 20px;
     line-height: 1.15;
+    color: #ffffff;
 }
 
 h1 span {
-    color: #00e5ff;
-    text-shadow: 0 0 30px rgba(0, 229, 255, 0.35);
+    color: #888888;
 }
 
 .hero-desc {
-    color: #94a3b8;
+    color: #aaaaaa;
     font-size: 1.1rem;
     max-width: 650px;
     margin: 0 auto 40px;
@@ -105,21 +106,20 @@ h1 span {
     margin-bottom: 35px;
 }
 
-.btn-cyan {
-    background-color: #00e5ff;
-    color: #07090e;
+.btn-white {
+    background-color: #ffffff;
+    color: #000000;
     padding: 14px 30px;
     border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
     transition: all 0.2s ease;
 }
 
-.btn-cyan:hover {
-    background-color: #33edff;
+.btn-white:hover {
+    background-color: #d1d1d1;
     transform: translateY(-2px);
-    box-shadow: 0 0 35px rgba(0, 229, 255, 0.5);
 }
 
 .btn-outline {
@@ -129,20 +129,20 @@ h1 span {
     border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.2s ease;
 }
 
 .btn-outline:hover {
-    border-color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.03);
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .hero-footer-text {
     display: flex;
     justify-content: center;
     gap: 30px;
-    color: #64748b;
+    color: #777777;
     font-size: 0.85rem;
     font-weight: 500;
 }
