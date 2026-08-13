@@ -1,68 +1,136 @@
-body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+/* Base styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #05070a;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-.wrapper {
-    max-width: 600px;
+/* Background pattern - creates an exciting tech feel */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 40px 20px;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23101824" fill-opacity="0.4" fill-rule="evenodd"><circle cx="3" cy="3" r="3"/><circle cx="23" cy="23" r="3"/></g></svg>');
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.main-wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Header section - centered and bold */
+.page-header {
     text-align: center;
+    max-width: 700px;
+    padding: 80px 40px;
+    background: radial-gradient(circle at center, #141e2e 0%, #05070a 70%);
+    border-radius: 20px;
+    border: 1px solid #19283c;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 10px;
-}
-
-.tagline {
-    color: #888888;
-    font-size: 1rem;
-    margin-bottom: 40px;
-}
-
-.card {
-    background-color: #0a0a0a;
-    border: 1px solid #222222;
-    border-radius: 12px;
-    padding: 40px;
-    text-align: left;
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    margin-top: 0;
+.header-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
     margin-bottom: 15px;
 }
 
-.card p {
-    color: #aaaaaa;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
+h1 .accent {
+    color: #00bcd4; /* Electric cyan accent */
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.6);
 }
 
-.download-btn {
+.beta-tag {
     display: inline-block;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 12px 24px;
-    border-radius: 6px;
+    background-color: rgba(0, 188, 212, 0.1);
+    color: #00bcd4;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 188, 212, 0.2);
+}
+
+.subtitle {
+    color: #b0bec5;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 50px;
+}
+
+/* Call-to-action buttons */
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+a {
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: background-color 0.2s;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.download-btn:hover {
-    background-color: #cccccc;
+.btn-download {
+    background-color: #00bcd4;
+    color: #05070a;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+}
+
+.btn-download:hover {
+    background-color: #00acc1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.6);
+}
+
+.btn-learn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #37474f;
+}
+
+.btn-learn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: #546e7a;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .page-header {
+        padding: 60px 20px;
+    }
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    .cta-group {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
